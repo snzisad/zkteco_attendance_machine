@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>Attendance management system</title>
+</head>
+<body>
+    <button class="send-attendance">Send Attendance</button>
+
+    <img src="{% static '/images/test.png' %}" alt="My image">
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+
+    <script>
+        $(".send-attendance").click(function(){
+            alert("Hello");
+        });
+    </script>
+</body>
+</html>

@@ -139,16 +139,16 @@ def live_attendance():
 def perform_operations():
 	# users_list()
  #    add_edit_user(
- #    	uid = 121,
- #    	name = "ABCD 2",
- #    	password = "1234",
+ #    	uid = 17,
+ #    	name = "Ikram Khan Xohan",
+ #    	password = "123456",
  #    	privilege = const.USER_DEFAULT, # const.USER_DEFAULT, const.USER_ADMIN
  #    	group_id = "",
- #    	user_id = "121",
+ #    	user_id = "17",
  #    	card = 0,
 	# )
 	# remove_user(121)
-	# get_attendance_record()
+	get_attendance_record()
 	# clear_attendance_record()
 	# clear_all_date()
 	# clear_buffer_data()
@@ -157,7 +157,7 @@ def perform_operations():
 	# live_attendance()
 	# get_set_time()
 	# device_information()
-	device_usage_options()
+	# device_usage_options()
 
 
 zk = ZK(ip_address, port=4370, timeout=5)
