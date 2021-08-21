@@ -18,6 +18,7 @@ def get_attendance_record():
     records = []
     date_list = []
     uid_list = []
+
     for single_attendance in attendances:
         date = str(single_attendance.timestamp.date())
         time = str(single_attendance.timestamp.time())
@@ -51,7 +52,6 @@ def get_attendance_record():
 
         time_list[date_pos][uid_pos] = previous_times
 
-
     # format the data according to api
     formatted_date = {}
     for i in range(0, len(date_list)):
@@ -59,7 +59,7 @@ def get_attendance_record():
         for j in range(0, len(uid_list)):
 
             if time_list[i][j] is not None:
-                uid = uid_list[i]
+                uid = uid_list[j]
                 times = ','.join(map(str, time_list[i][j]))
                 user_attendance_data[uid]=times
 
