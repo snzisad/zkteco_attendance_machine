@@ -138,17 +138,17 @@ def live_attendance():
 
 def perform_operations():
 	# users_list()
- #    add_edit_user(
- #    	uid = 17,
- #    	name = "Ikram Khan Xohan",
- #    	password = "123456",
- #    	privilege = const.USER_DEFAULT, # const.USER_DEFAULT, const.USER_ADMIN
- #    	group_id = "",
- #    	user_id = "17",
- #    	card = 0,
-	# )
+    add_edit_user(
+    	uid = 19,
+    	name = "Monayam Reshad",
+    	password = "123456",
+    	privilege = const.USER_DEFAULT, # const.USER_DEFAULT, const.USER_ADMIN
+    	group_id = "",
+    	user_id = "19",
+    	card = 0,
+	)
 	# remove_user(121)
-	get_attendance_record()
+	# get_attendance_record()
 	# clear_attendance_record()
 	# clear_all_date()
 	# clear_buffer_data()

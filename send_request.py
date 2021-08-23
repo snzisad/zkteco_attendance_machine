@@ -36,21 +36,31 @@ def get_attendance_record():
 
         if uid not in uid_list:
             uid_list.append(uid)
+    
+    # ignore attendance data of super admin
+    uid_list.remove('1')
+
 
     # make separate time list for each date and user
-
     time_list = [[None]*len(uid_list)]*len(date_list)
     for record in records:
-        date_pos = date_list.index(record['date'])
-        uid_pos = uid_list.index(record['uid'])
-        previous_times = time_list[date_pos][uid_pos]
+            try:
+                date_pos = date_list.index(record['date'])
+            except:
+                continue
+            try:
+                uid_pos = uid_list.index(record['uid'])
+            except:
+                continue
 
-        if previous_times is not None:
-            previous_times.append(record['time'])
-        else:
-            previous_times = [record['time']]
+            previous_times = time_list[date_pos][uid_pos]
 
-        time_list[date_pos][uid_pos] = previous_times
+            if previous_times is not None:
+                previous_times.append(record['time'])
+            else:
+                previous_times = [record['time']]
+
+            time_list[date_pos][uid_pos] = previous_times
 
     # format the data according to api
     formatted_date = {}
